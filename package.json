@@ -1,0 +1,41 @@
+{
+    "name": "cactus",
+    "version": "1.0.0",
+    "description": "graphql server for tsw.",
+    "main": "src/index.js",
+    "scripts": {
+        "dev": "cross-env  NODE_ENV=development node ./dev-config/express.js --watch src/  ",
+        "devs": "cross-env NODE_ENV=development node --inspect-brk ./dev-config/express.js",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "http://git.code.oa.com/qzone-web/cactus.git"
+    },
+    "dependencies": {
+        "@tencent/lily": "^0.0.3",
+        "apollo-link-context": "^1.0.10",
+        "apollo-link-http": "^1.5.7",
+        "apollo-server-express": "^2.2.6",
+        "apollo-upload-server": "^7.1.0",
+        "body-parser-graphql": "1.1.0",
+        "cookie-parser": "^1.4.3",
+        "cors": "^2.8.5",
+        "dataloader": "^1.4.0",
+        "express": "^4.16.4",
+        "express-http-proxy": "^1.5.0",
+        "fast-glob": "^2.2.4",
+        "graphql": "^14.0.2",
+        "graphql-subscriptions": "^1.0.0",
+        "graphql-tools": "^4.0.3",
+        "http-proxy": "^1.17.0",
+        "node-fetch": "^2.3.0",
+        "proxy-agent": "^3.0.3",
+        "subscriptions-transport-ws": "^0.9.15"
+    },
+    "devDependencies": {
+        "cross-env": "^5.2.0"
+    },
+    "author": "",
+    "license": "ISC"
+}

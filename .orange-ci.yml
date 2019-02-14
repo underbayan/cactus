@@ -1,0 +1,50 @@
+master:
+    push:
+        - L5: xxxxx
+          src: /
+          steps:
+              - name: config yarn
+                shell: yarn config set registry http://r.yarn.oa.com
+              - name: install
+                shell: yarn install --production
+                timeout: 300000
+              - name: release
+                shell: ./tools/release.sh
+              - name: pkg-generator
+                type: zhiyunPkg
+                options:
+                    product: qzone
+                    name: weishi_superAdmin_apollo
+                    dist: /
+              - name: zhiyun-autoupdate
+                type: zhiyunAutoUpdate
+                options:
+                    product: qzone
+                    name: weishi_superAdmin_apollo
+                    ips:
+                        - xxxxx
+dev:
+    push:
+        - L5: xxxxx
+          src: /
+          steps:
+              - name: config yarn
+                shell: yarn config set registry http://r.yarn.oa.com
+              - name: install
+                shell: yarn install --production
+                timeout: 300000
+              - name: release
+                shell: ./tools/release.sh
+              - name: pkg-generator
+                type: zhiyunPkg
+                options:
+                    product: qzone
+                    name: weishi_superAdmin_apollo
+                    dist: /
+              - name: zhiyun-autoupdate
+                type: zhiyunAutoUpdate
+                options:
+                    product: qzone
+                    name: weishi_superAdmin_apollo
+                    ips:
+                        - xxxxx

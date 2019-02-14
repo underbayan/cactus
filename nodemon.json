@@ -1,0 +1,13 @@
+{
+    "restartable": "rs",
+    "ignore": [".git", ".svn", "./node_modules"],
+    "verbose": true,
+    "execMap": {
+        "js": "node --harmony"
+    },
+    "watch": ["./src", "./dev-config/express.js"],
+    "env": {
+        "NODE_ENV": "development"
+    },
+    "ext": "js json"
+}
